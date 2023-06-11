@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+    background-color: #0ad1b1;
+    background-size: contain;
+    background-position: center;
+}
+.weather-part img{
+    max-width: 135px;
+}
+.location img{
+    max-width: 28px;
+}
+.wrapper{
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 12px 14px 17px -7px rgb(9 9 9 / 42%);
+    margin: auto;
+}
+.wrapper header{
+    color: #0ad1b1;
+    font-size: 21px;
+    font-weight: 500;
+    padding: 16px 15px;
+    background-color: #1a1f2c;
+    text-align: center;
+    border-radius: 4px 4px 0 0 ;
+}
+header{
+    gap: 20px;
+}
+header i{
+    cursor: pointer;
+    font-size: 30px;
+    vertical-align: middle;
+    
+}
+.wrapper .input-part{
+    margin: 20px 25px 30px;
+}
+.input-part :where(input,button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.input-part input{
+    text-align: center;
+    border: 1px solid #bfbfbf;
+}
+
+.input-part input:is(:focus, :valid){
+    border: 2px solid #f07577;
+}
+.input-part button{
+    color: #0ad1b1;
+    cursor: pointer;
+    background-color: #1a1f2c;
+}
+
+.input-part .separator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background-color: #ccc;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.separator::before{
+    content: "or";
+    color: #ccc;
+    font-size: 19px;
+    padding: 0 15px;
+    background-color: #fff;
+}
+
+.input-part .info-txt{
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: red;
+    display: none;
+}
+.info-txt.error{
+    display: block;
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+.info-txt.pending{
+    display: block;
+    color: #0ad1b1;
+    background-color: #d1ecf1;
+    border: #bee2eb;
+}
+
+.wrapper .weather-part{
+    margin: 30px 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+.weather-part .temp{
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+    color: #0ad1b1;
+}
+
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+.weather-part .temp .deg{
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+}
+.weather-part .weather{
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+
+.weather-part .location{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.weather-part .button-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bfbfbf;
+}
+
+.button-details .column{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.column i{
+    color: #f04b45;
+    font-size: 40px;
+}
+
+.column .humidity{
+    border-left: 1px solid #bfbfbf;
+}
+
+.details .temp,.humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -2px;
+    color: #0ad1b1;
+}
+
+.details .temp .deg{
+    margin: 0px;
+    font-size: 17px;
+    padding: 0px 2px 0 1px;
+}
+
+.details p{
+    font-size: 14px;
+    margin-top: -6px;
+}
+
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+.wrapper.active .input-part{
+    display: none;
+}
+.wrapper.active .weather-part{
+    display: flex;
+}
